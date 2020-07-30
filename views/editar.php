@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div class="container">
-		<form method="post" action="<?php echo base_url().'/index.php/contato/salvar'?>">
+		<form method="post" action="<?php echo base_url().'index.php/contato/salvar'?>">
         <input type="hidden" id="id" name="id" value="<?php echo $contato['id'];?>">
 			<div class="col-md-4">
 				<label >Nome:</label>
