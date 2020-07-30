@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container">
 		<h3><?php echo $titulo ?></h3>
 
-		<form method="post" action="<?php echo base_url().'/index.php/contato/salvar'?>">
+		<form method="post" action="<?php echo base_url().'index.php/contato/salvar'?>">
 
 			<div class="col-md-4">
 				<label >Nome:</label>
