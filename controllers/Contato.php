@@ -9,10 +9,11 @@ class Contato extends CI_Controller {
 			$this->load->helper('url');
 			$this->load->library('session');
 			$this->load->model('Contato_model', 'model', TRUE);
-   		 }
+		}			
 
 
 	public function index(){		
+		$dados['cabecalho'] = "CRUD com CodeIgniter";
 		$dados['titulo'] = "CRUD com CodeIgniter | Agenda";
 		$dados['contatos'] = $this->model->listar();
 		$this->load->view('home', $dados);
