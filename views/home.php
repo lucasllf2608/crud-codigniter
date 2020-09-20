@@ -3,20 +3,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/bootstrap.css">	
+
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/bootstrap.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/jquery.dataTables.css">	
-<script type='text/javascript' src="<?php echo base_url();?>assets/js/function.js"></script>
-<script type='text/javascript' src="<?php echo base_url();?>assets/js/bootstrap.js"></script>
+
 <script type='text/javascript' src="<?php echo base_url();?>assets/js/jquery.dataTables.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+
+
 <title><?php echo $cabecalho ?></title>
 
 
 <script type='text/javascript'>
-	$(
-		$(document).ready(function () {
-    $('#dados').DataTable();
-} );
-
+	$(document).ready(function(){
+		$('.telefone').mask('0000-0000');
+	});
 </script>
 
 </head>
@@ -28,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container">
 		<h3><?php echo $titulo ?></h3>
 
-		<form method="post" action="<?php echo base_url().'/index.php/contato/salvar'?>">
+		<form method="post" action="<?php echo base_url().'index.php/contato/salvar'?>">
 
 			<div class="col-md-4">
 				<label >Nome:</label>
@@ -40,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 			<div class="col-md-4">
 				<label >Telefone:</label>
-				<input type="text" name="telefone" class="form-control"  placeholder="Telefone" required>
+				<input type="text" name="telefone" class="form-control telefone"  placeholder="Telefone" required>
 			</div>
 			<div class="col-md-4">
 			
